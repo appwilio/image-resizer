@@ -6,6 +6,8 @@ module.exports = {
      * @returns {string} resized url
      */
     resize : function(url, sizeId){
+        if(!url)
+            return url;
         var path = url.split('/'),
             image = path.pop();
         path.push(sizeId, image);
